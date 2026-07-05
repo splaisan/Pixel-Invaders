@@ -1,0 +1,15 @@
+# Implementation handoff / internal spec — not for the public repo
+space-invaders-handoff.md
+*-handoff.md
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Python / conda dev-serve artifacts
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

@@ -1,0 +1,15 @@
+# Pixel Invaders — compose stanza for Portainer / docker compose
+# Created by Stephane Plaisance
+# Co-authored by Claude (Anthropic)
+# Version 1.1.0 — 2026-07-05
+#
+# Loopback-only binding on purpose: reach the game through an SSH tunnel
+# (ssh -L 8080:127.0.0.1:8080 your-docker-host), never from the open internet.
+services:
+  pixel-invaders:
+    build: .
+    image: pixel-invaders:1.1.0
+    container_name: pixel-invaders
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"

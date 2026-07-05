@@ -1,0 +1,16 @@
+# Pixel Invaders — dev-serve conda environment (any Docker/Linux host)
+# Created by Stephane Plaisance
+# Co-authored by Claude (Anthropic)
+# Version 1.1.0 — 2026-07-05
+#
+# The game is a static site; the only "dependency" is a web server for
+# ES-module loading (file:// will not work). Python's http.server is enough.
+#
+#   conda env create -f environment.yml
+#   conda activate pixel-invaders
+#   python -m http.server 8080 --bind 127.0.0.1
+name: pixel-invaders
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
