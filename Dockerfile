@@ -9,6 +9,10 @@
 #          publish this on 0.0.0.0 on institutional infrastructure)
 FROM nginx:alpine
 
+# eMudhra CA incident (2026-10-20, #1): refresh the system trust store
+# (Alpine ca-certificates >= 20261020-r0).
+RUN apk add --no-cache --upgrade ca-certificates
+
 COPY index.html /usr/share/nginx/html/index.html
 COPY src /usr/share/nginx/html/src
 

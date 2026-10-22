@@ -14,3 +14,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.12
+  # eMudhra CA incident (2026-10-20, #1): the fixed trust stores. An existing
+  # env does not change by itself; create it again.
+  - conda-forge::certifi>=2026.10.19
+  - conda-forge::ca-certificates

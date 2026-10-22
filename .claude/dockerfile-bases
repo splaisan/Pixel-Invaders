@@ -1,0 +1,7 @@
+# Docker base images this repo may use besides the house default (ubuntu:24.04).
+# One image per line. Read by the guard_dockerfile_content hook.
+#
+# nginx:alpine: Dockerfile, the static-serve image of the game.
+# Approved by Stephane Plaisance on 2026-10-22 (#1) because it is the base
+# already in use. This file does not change the base image.
+nginx:alpine
