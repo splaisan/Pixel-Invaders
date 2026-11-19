@@ -58,6 +58,17 @@ The compose file binds to `127.0.0.1` only. If you deploy via Portainer, keep
 that binding (or an equivalent firewall scope) — this is an unauthenticated
 static page and should not be reachable from the open internet.
 
+**Not deployed.** No shared Docker host runs this game (checked 2026-11-19:
+pacbio01, nuc3 and nuc8). There is no Portainer stack file. Build it only
+for local play. An image built before 2026-10-22 does not have the fixed CA
+trust store (eMudhra CA, #1): build it again with `--pull`:
+
+```bash
+docker build --pull -t pixel-invaders:1.1.0 .
+```
+
+See `dev_docs/HISTORY.md` for the record.
+
 ---
 
 ## Controls (default — all rebindable)
@@ -122,6 +133,7 @@ Dockerfile          nginx:alpine static-serve image
 docker-compose.yml  loopback-bound service for Portainer / compose
 LICENSE             MIT
 DISCLAIMER.md       IP / trademark notice
+dev_docs/HISTORY.md deployment and security record
 ```
 
 ## Display
